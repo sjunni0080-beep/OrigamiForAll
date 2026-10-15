@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>OrigamiForAll | Easy Paper Boat for Kids</title>
+  <!-- Bootstrap 5 CSS + Icons + Google Fonts + jQuery -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-2 text-dark" href="index.html">Origami<span
+          class="text-warning">ForAll</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section: Paper Boat Intro with CUSTOM IMAGE -->
+  <section class="container py-5 my-2 hero-section" id="paper-boat">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="hero-badge mb-3">
+          <i class="fas fa-child me-1"></i> Easy for Kids
+        </div>
+        <h1 class="display-4 fw-bold mb-3" style="color:#2e241f;">Paper Cat</h1>
+        <p class="lead mb-3" style="color:#5e4636; font-size: 1.25rem;">The classic paper boat — the first fold many of
+          us ever learned. Floats on water and stirs childhood memories.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#steps-straight" class="btn btn-warm btn-lg px-4 rounded-pill">
+            <i class="fas fa-ship me-2"></i>Start Folding
+          </a>
+          <a href="#more-kids" class="btn btn-outline-warm btn-lg px-4 rounded-pill">
+            <i class="fas fa-folder-open me-2"></i>All categories
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="origami-hero-icon shadow-sm">
+          <!-- ✅ APNI IMAGE YAHAN LAGAO - hero-boat.jpg -->
+          <img src="images/1.jpg" alt="Paper Cat"
+            style="width:100%; max-width:380px; border-radius:30px; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+          <div class="mt-3 fst-italic text-secondary">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP BY STEP SECTION - STRAIGHT VERTICAL DIV (only text, NO images) -->
+  <section id="steps-straight" class="container py-5">
+    <div class="text-center mb-4">
+      <span class="hero-badge bg-white border border-soft">
+        <i class="fas fa-cog me-1"></i> Step by step
+      </span>
+      <h2 class="display-6 fw-bold mt-3">Fold your own <span style="color:#e38b3e;">Paper Cat</span></h2>
+      <p class="fs-5 text-secondary w-75 mx-auto">Follow these 6 simple folds — one after another</p>
+    </div>
+
+    <!-- STRAIGHT / FULL WIDTH DIV CONTAINER (only text steps, no images) -->
+    <div class="steps-straight-container">
+      <div id="straightStepsList">
+        <!-- dynamic straight steps loaded from jQuery (text only) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- More in Easy for Kids + Categories with CUSTOM IMAGES (frog.jpg, crane.jpg, heart.jpg) -->
+  <section id="more-kids" class="container py-5">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+      <div>
+        <h2 class="fw-bold"><i class="fas fa-star-of-life me-2" style="color:#f5a65b;"></i> More in Easy for Kids</h2>
+        <p class="text-secondary">Simple origami projects to spark creativity</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <!-- Card 1: Jumping Frog with IMAGE -->
+      <div class="col-md-4">
+        <div class="category-card h-100">
+          <!-- ✅ APNI IMAGE YAHAN LAGAO - frog.jpg -->
+          <img src="images/10.jpg" alt="Origami Jumping Frog" class="category-img">
+          <div class="p-4">
+            <h4>Origami craft</h4>
+            <p class="card-text text-secondary">A playful frog that really hops — perfect for little fingers.</p>
+            <a href="#" class="text-decoration-none fw-semibold category-learn" style="color:#e38b3e;">Learn →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2: Traditional Crane with IMAGE -->
+      <div class="col-md-4">
+        <div class="category-card h-100">
+          <!-- ✅ APNI IMAGE YAHAN LAGAO - crane.jpg -->
+          <img src="images/11.jpg" alt="Traditional Crane" class="category-img">
+          <div class="p-4">
+            <h4>Traditional craft</h4>
+            <p class="card-text text-secondary">Symbol of peace, a classic intermediate fold.</p>
+            <a href="#" class="text-decoration-none fw-semibold category-learn" style="color:#e38b3e;">Learn →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3: Heart Envelope with IMAGE -->
+      <div class="col-md-4">
+        <div class="category-card h-100">
+          <!-- ✅ APNI IMAGE YAHAN LAGAO - heart.jpg -->
+          <img src="images/36.jpg" alt="Heart Envelope" class="category-img">
+          <div class="p-4">
+            <h4>Origami craft</h4>
+            <p class="card-text text-secondary">Fold a love note with a secret pocket — kids adore it.</p>
+            <a href="#" class="text-decoration-none fw-semibold category-learn" style="color:#e38b3e;">Learn →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3>Origami<span class="text-warning">ForAll</span></h3>
+          <p>Learn the gentle art of paper folding — one crease at a time.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Explore</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>Newsletter</h5>
+          <p class="small">A new fold delivered to your inbox each week.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="your@email.com" id="newsletterEmail"><br>
+            <button class="btn btn-warning" type="button" id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="newsletterMsg" class="small mt-2"></div>
+        </div>
+        <div class="col-lg-3">
+          <h5>Feedback</h5>
+          <button class="btn btn-outline-light btn-sm rounded-pill" data-bs-toggle="modal"
+            data-bs-target="#feedbackModal">
+            <i class="fas fa-comment-dots me-1"></i> Send feedback
+          </button>
+        </div>
+      </div>
+      <hr class="mt-4 opacity-25">
+      <div class="text-center small">© 2025 OrigamiForAll — Follow with palette and good paper.</div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">We'd love your feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="feedbackForm">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="feedbackName">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" id="feedbackMessage" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-soft-primary w-100">Submit feedback</button>
+            <div id="feedbackSuccess" class="mt-2 text-success small text-center"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      // ----- Step by Step data (ONLY TEXT, NO IMAGES) -----
+      const straightSteps = [
+        "Fold a rectangular sheet in half lengthways, then unfold to mark a vertical center crease.",
+        "Fold the sheet in half top-to-bottom so the long edge is at the bottom.",
+        "Fold the top two corners down to meet at the center crease, forming a triangle with a strip at the bottom.",
+        "Fold the bottom strip up on the front, then turn over and repeat on the back.",
+        "Open the bottom and reshape into a diamond, then fold the bottom triangle up on both sides.",
+        "Open again and pull the top points outward gently — the boat will pop into shape."
+      ];
+
+      // Populate the straight vertical div with each step (TEXT ONLY)
+      const $straightList = $("#straightStepsList");
+      if ($straightList.length) {
+        $straightList.empty();
+        $.each(straightSteps, function (index, stepText) {
+          const stepNumber = index + 1;
+          const delay = index * 80;
+          const stepHtml = `
+          <div class="step-straight-item ripple" data-step-index="${stepNumber}" style="animation-delay: ${delay}ms;">
+            <div class="step-number-badge">${stepNumber}</div>
+            <div class="step-text-content">
+              ${stepText}
+              <span class="step-icon"><i class="fas fa-rotate-right"></i></span>
+            </div>
+          </div>
+        `;
+          $straightList.append(stepHtml);
+        });
+      }
+
+      // ANIMATION: Click on any step shows pulse animation and tip
+      $(".step-straight-item").on("click", function () {
+        let stepNum = $(this).data("step-index");
+        // Pulse animation on badge
+        $(this).find(".step-number-badge").css("animation", "gentlePulse 0.4s ease");
+        setTimeout(() => {
+          $(this).find(".step-number-badge").css("animation", "");
+        }, 400);
+
+        // Show helpful tip via toast
+        let tipMessage = "";
+        if (stepNum === 1) tipMessage = "💡 Tip: Use a crisp rectangular sheet for sharp creases!";
+        else if (stepNum === 2) tipMessage = "📏 Make sure edges align perfectly before creasing.";
+        else if (stepNum === 3) tipMessage = "🔺 Fold corners symmetrically to the center line.";
+        else if (stepNum === 4) tipMessage = "⬆️ Flip and repeat the bottom strip on both sides.";
+        else if (stepNum === 5) tipMessage = "💎 Open gently and reshape into a diamond shape.";
+        else tipMessage = "⛵ Pull the top points outward — your boat magically appears!";
+
+        let toastHtml = `<div class="toast align-items-center bg-light border-warm position-fixed bottom-0 start-50 translate-middle-x m-3 shadow" style="z-index: 1100; border-left: 4px solid #f5a65b; animation: fadeSlideUp 0.3s;" role="alert">
+        <div class="d-flex"><div class="toast-body"><i class="fas fa-lightbulb text-warning me-2"></i> ${tipMessage}</div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button></div></div>`;
+        $("body").append(toastHtml);
+        let toastEl = $(".toast").last();
+        let bsToast = new bootstrap.Toast(toastEl[0], { autohide: true, delay: 2500 });
+        bsToast.show();
+        setTimeout(() => { toastEl.remove(); }, 2800);
+      });
+
+      // Newsletter subscription with validation + animation
+      $("#newsletterForm").on("submit", function (e) {
+        e.preventDefault();
+        let emailInput = $("#subEmail");
+        let emailVal = emailInput.val().trim();
+        let msgDiv = $("#newsletterMsg");
+
+        if (!emailVal) {
+          msgDiv.html('<span class="text-danger"><i class="fas fa-exclamation-circle"></i> Please enter an email address.</span>').fadeIn(200).delay(2500).fadeOut(500);
+          return false;
+        }
+        const emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+        if (!emailPattern.test(emailVal)) {
+          msgDiv.html('<span class="text-danger"><i class="fas fa-envelope"></i> Valid email required.</span>').fadeIn(200).delay(2500).fadeOut(500);
+          return false;
+        }
+
+        msgDiv.html('<i class="fas fa-check-circle"></i> Thanks! A new fold arrives weekly ✨').removeClass("text-danger").addClass("text-success").fadeIn(200);
+        msgDiv.css("animation", "gentlePulse 0.5s");
+        emailInput.val("");
+        setTimeout(() => {
+          msgDiv.fadeOut(800);
+        }, 3000);
+        return false;
+      });
+
+      // Smooth scrolling for anchor links
+      $('a[href^="#"]').on('click', function (event) {
+        let target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 80
+          }, 500);
+        }
+      });
+
+      // Category learn buttons
+      $(".category-learn").on("click", function (e) {
+        e.preventDefault();
+        let projectName = $(this).closest(".category-card").find("h4").text();
+        let toastHtml = `<div class="toast align-items-center text-white bg-warm position-fixed bottom-0 end-0 m-3" style="background-color:#f5a65b; z-index: 1100;" role="alert">
+        <div class="d-flex"><div class="toast-body">📖 Tutorial for "${projectName}" coming soon! Stay tuned.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div></div>`;
+        $("body").append(toastHtml);
+        let toastEl = $(".toast").last();
+        let bsToast = new bootstrap.Toast(toastEl[0], { autohide: true, delay: 2500 });
+        bsToast.show();
+        setTimeout(() => { toastEl.remove(); }, 2800);
+      });
+
+      // All categories button
+      $(".all-categories-btn").on("click", function () {
+        let infoToast = `<div class="toast align-items-center bg-light border-0 position-fixed bottom-0 start-50 translate-middle-x m-3" style="z-index: 1100;" role="alert">
+        <div class="d-flex"><div class="toast-body text-center">✨ Explore all origami categories — more coming soon! ✨</div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button></div></div>`;
+        $("body").append(infoToast);
+        let toastEl = $(".toast").last();
+        let bsToast = new bootstrap.Toast(toastEl[0], { autohide: true, delay: 2000 });
+        bsToast.show();
+        setTimeout(() => toastEl.remove(), 2200);
+      });
+
+      // Feedback & Contact links
+      $(".feedback-link, .contact-link, .about-link").on("click", function (e) {
+        e.preventDefault();
+        let msg = $(this).hasClass("feedback-link") ? "📝 We’d love your feedback! Please email us at hello@origamiforall.com" :
+          ($(this).hasClass("contact-link") ? "📬 Contact us: support@origamiforall.com or call +1 (555) 678-ORIGAMI" :
+            "📖 OrigamiForAll was founded with a mission to share the joy of paper folding worldwide.");
+        let alertDiv = `<div class="alert alert-warning alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 shadow" style="z-index: 1200; min-width: 280px; animation: fadeSlideUp 0.3s;" role="alert">
+        ${msg} <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>`;
+        $("body").prepend(alertDiv);
+        setTimeout(() => {
+          $(".alert").alert('close');
+        }, 4000);
+      });
+
+      // Mobile navbar collapse
+      $(".nav-link").on("click", function () {
+        if ($(window).width() < 992) {
+          $("#navbarMain").collapse('hide');
+        }
+      });
+
+      // Dynamic year in footer
+      let currentYear = new Date().getFullYear();
+      if (currentYear !== 2026) {
+        $("footer .small.text-secondary").each(function () {
+          if ($(this).text().includes("© 2026")) {
+            $(this).text($(this).text().replace("2026", currentYear));
+          }
+        });
+      }
+
+      // Add ripple effect to buttons
+      $(".btn, .step-straight-item").addClass("ripple");
+    });
+        $(document).ready(function () {
+      AOS.init({ duration: 800, once: true, offset: 50 });
+
+      // Newsletter Subscription
+      $('#subscribeBtn').on('click', function () {
+        let email = $('#newsletterEmail').val();
+        if (email && email.includes('@')) {
+          $('#newsletterMsg').html('✨ Subscribed! ✨').css('color', '#f5bc70');
+          $('#newsletterEmail').val('');
+        } else {
+          $('#newsletterMsg').html('Valid email please.').css('color', '#f8b281');
+        }
+        setTimeout(() => $('#newsletterMsg').fadeOut(2000, function () { $(this).html('').show(); }), 2000);
+      });
+
+      // Feedback Form
+      $('#feedbackForm').on('submit', function (e) {
+        e.preventDefault();
+        let name = $('#feedbackName').val() || "Friend";
+        let msg = $('#feedbackMessage').val();
+        if (!msg) {
+          $('#feedbackSuccess').html('Please write a message.').css('color', '#dc3545');
+          return;
+        }
+        $('#feedbackSuccess').html(`Thanks ${name}! We'll get back to you.`).css('color', '#2b6e3c');
+        $('#feedbackForm')[0].reset();
+        setTimeout(() => { $('#feedbackSuccess').html(''); $('#feedbackModal').modal('hide'); }, 2000);
+      });
+    });
+  </script>
+</body>
+
+</html>

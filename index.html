@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>OrigamiForAll | Gentle Art of Paper Folding</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-2 text-dark" href="index.html">Origami<span
+          class="text-warning">ForAll</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with SLIDER (Carousel) -->
+  <section class="pt-5 pb-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="hero-badge mb-3"><i class="fas fa-star me-1"></i> A fold for everyone, a story in every
+            crease.</span>
+          <h1 class="hero-title mt-2">From the kitchen tables of China to the homes of Japan — now your screen.</h1>
+          <p class="lead text-secondary mt-3">Explore origami with clear, step-by-step designs across 12 hand-picked
+            categories.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#categories" class="btn btn-soft-primary px-4 py-2"><i class="fas fa-folder-open me-2"></i>Browse
+              categories</a>
+            <a href="#story" class="btn btn-outline-warm px-4 py-2"><i class="fas fa-book-open me-2"></i>Learn the
+              story</a>
+          </div>
+
+          <div class="row mt-5 g-3">
+            <div class="col-4">
+              <div class="stat-card text-center">
+                <h3 class="fw-bold mb-0 text-dark">12</h3><small class="text-muted">Categories</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card text-center">
+                <h3 class="fw-bold mb-0 text-dark">16+</h3><small class="text-muted">Designs</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card text-center">
+                <div class="fw-bold mb-0 text-dark">4.9<span class="rating-star ms-1"><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star-half-alt"></i></span></div>
+                <small class="text-muted">Rated</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAROUSEL / SLIDER -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner rounded-4 shadow">
+              <div class="carousel-item active">
+                <img src="1.jpg" class="d-block w-100" alt="Origami"
+                  style="height: 400px; object-fit: cover; border-radius: 1rem;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                  <p class="mb-0">🕊️ Beautiful Origami Art</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="2.jpg" class="d-block w-100" alt="Origami"
+                  style="height: 400px; object-fit: cover; border-radius: 1rem;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                  <p class="mb-0">🦋 Paper Butterfly</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="3.jpg" class="d-block w-100" alt="Origami"
+                  style="height: 400px; object-fit: cover; border-radius: 1rem;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                  <p class="mb-0">🌸 Paper Flower</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/32.jpg" class="d-block w-100" alt="Origami"
+                  style="height: 400px; object-fit: cover; border-radius: 1rem;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                  <p class="mb-0">🦊 Paper Fox</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle p-3"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle p-3"></span>
+            </button>
+          </div>
+          <p class="small text-muted text-center mt-2"><i class="fas fa-images me-1"></i> Swipe or click arrows to see
+            more origami art</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="container my-5" id="story">
+    <div class="row align-items-center bg-warning bg-opacity-10 p-5 rounded-4">
+      <div class="col-md-7">
+        <span class="text-uppercase small text-warning fw-semibold"><i class="fas fa-feather-alt"></i> WHAT IS
+          ORIGAMI?</span>
+        <h2 class="display-5 fw-bold mt-2">From a single sheet, a whole world.</h2>
+        <p class="mt-3 fs-5">Origami originated in China and was popularized in Japan. It is the gentle art of
+          transforming paper into 3D forms — without scissors, without glue, just folds.</p>
+        <a href="#categories" class="btn btn-soft-primary mt-2">Start folding →</a>
+      </div>
+      <div class="col-md-5 text-center mt-4 mt-md-0">
+        <img src="images/19.jpg" alt="Origami World" class="img-fluid rounded-3 shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CATEGORIES SECTION - HAR CARD KA ALAG LINK -->
+  <!-- ============================================ -->
+  <section class="container my-5 pt-3" id="categories">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold display-6">Popular categories</h2>
+      <p class="text-muted fs-5">Handpicked folds for every skill — from tiny hands to patient elders.</p>
+    </div>
+    <div class="row g-4">
+
+      <!-- CARD 1: Easy for Kids -->
+      <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+        <div class="category-card card h-100">
+          <img src="images/1.jpg" class="custom-img-tag" alt="Animals">
+          <div class="card-body">
+            <i class="fas fa-paw fs-2 mb-2" style="color:#e67e22;"></i> 
+            <h5 class="card-title fw-bold">Animals</h5>
+            <p class="card-text text-secondary">Simple folds with quick wins — perfect for tiny hands.</p>
+            <!-- 👇 YAHAN EASY FOR KIDS KA LINK DALO -->
+            <a href="animals.html" class="btn btn-outline-warm w-100">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: Intermediate -->
+      <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+        <div class="category-card card h-100">
+          <img src="images/2.jpg" class="custom-img-tag" alt="Complex for Elders">
+          <div class="card-body">
+            <i class="fas fa-brain fs-2 mb-2" style="color:#e67e22;"></i> 
+            <h5 class="card-title fw-bold">Complex for Elders</h5>
+            <p class="card-text text-secondary">Step up with a few extra creases and a little patience.</p>
+            <!-- 👇 YAHAN INTERMEDIATE KA LINK DALO -->
+            <a href="ComplexforElders.html" class="btn btn-outline-warm w-100">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Complex for Elders -->
+      <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+        <div class="category-card card h-100">
+          <img src="images/3.jpg" class="custom-img-tag" alt="Easy for Kids">
+          <div class="card-body">
+             <i class="fas fa-child fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="card-title fw-bold">Easy for Kids</h5>
+            <p class="card-text text-secondary">Intricate models that reward slow, careful folding.</p>
+            <!-- 👇 YAHAN COMPLEX FOR ELDERS KA LINK DALO -->
+            <a href="esay-for-kids.html" class="btn btn-outline-warm w-100">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: Animals -->
+      <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+        <div class="category-card card h-100">
+          <img src="images/4.jpg" class="custom-img-tag" alt="Intermediate">
+          <div class="card-body">
+            <i class="fas fa-chart-line fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="card-title fw-bold">Intermediate</h5>
+            <p class="card-text text-secondary">Floats, elephants, frogs and more — a paper zoo.</p>
+            <!-- 👇 YAHAN ANIMALS KA LINK DALO -->
+            <a href="intermediate.html" class="btn btn-outline-warm w-100">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: Birds -->
+      <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+        <div class="category-card card h-100">
+          <img src="images/12.jpg" class="custom-img-tag" alt="Birds">
+          <div class="card-body">
+            <i class="fas fa-dove fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="card-title fw-bold">Birds</h5>
+            <p class="card-text text-secondary">Cranes, swans and sparrows that look ready to fly.</p>
+            <!-- 👇 YAHAN BIRDS KA LINK DALO -->
+            <a href="birds.html" class="btn btn-outline-warm w-100">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: Flowers -->
+      <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+        <div class="category-card card h-100">
+          <img src="images/35.jpg" class="custom-img-tag" alt="Flowers">
+          <div class="card-body">
+            <i class="fas fa-seedling fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="card-title fw-bold">Flowers</h5>
+            <p class="card-text text-secondary">Tulips, flowers and roses that never wilt.</p>
+            <!-- 👇 YAHAN FLOWERS KA LINK DALO -->
+            <a href="flowers.html" class="btn btn-outline-warm w-100">Explore →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURED SECTION - HAR CARD KA ALAG LINK -->
+  <!-- ============================================ -->
+  <section class="container my-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold display-6">Featured folds</h2>
+      <p class="text-muted fs-5">Paper treasures to inspire your next creation</p>
+    </div>
+    <div class="row g-4">
+
+      <!-- FEATURED 1: Paper Boat -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/14.jpg" class="custom-img-tag" alt="Paper Boat">
+          <div class="card-body">
+            <i class="fas fa-ship fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Paper Boat</h5>
+            <!-- 👇 YAHAN PAPER BOAT KA LINK DALO -->
+            <a href="paper-boat.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 2: Happy Frog -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/42.jpg" class="custom-img-tag" alt="Happy Frog">
+          <div class="card-body">
+            <i class="fas fa-frog fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Happy Frog</h5>
+            <!-- 👇 YAHAN HAPPY FROG KA LINK DALO -->
+            <a href="frog.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 3: Lily Flower -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/9.jpg" class="custom-img-tag" alt="Lily Flower">
+          <div class="card-body">
+            <i class="fas fa-leaf fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Lily Flower</h5>
+            <!-- 👇 YAHAN LILY FLOWER KA LINK DALO -->
+            <a href="lily.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 4: Quilling Mandala -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/10.jpg" class="custom-img-tag" alt="Quilling Mandala">
+          <div class="card-body">
+            <i class="fas fa-mandala fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Quilling Mandala</h5>
+            <!-- 👇 YAHAN QUILLING MANDALA KA LINK DALO -->
+            <a href="mandala.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 5: Origami Elephant -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/11.jpg" class="custom-img-tag" alt="Origami Elephant">
+          <div class="card-body">
+            <i class="fas fa-elephant fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Origami star</h5>
+            <!-- 👇 YAHAN ORIGAMI ELEPHANT KA LINK DALO -->
+            <a href="star.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 6: Paper Fox -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/6.jpg" class="custom-img-tag" alt="Paper Fox">
+          <div class="card-body">
+            <i class="fas fa-fox fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Paper Fox</h5>
+            <!-- 👇 YAHAN PAPER FOX KA LINK DALO -->
+            <a href="fox.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 7: Origami Crane -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/13.jpg" class="custom-img-tag" alt="Origami Crane">
+          <div class="card-body">
+            <i class="fas fa-dove fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Origami game</h5>
+            <!-- 👇 YAHAN ORIGAMI CRANE KA LINK DALO -->
+            <a href="game.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED 8: Paper Dragon -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left">
+        <div class="featured-card card h-100 text-center">
+          <img src="images/60.png" class="custom-img-tag" alt="Paper Dragon">
+          <div class="card-body">
+            <i class="fas fa-dragon fs-2 mb-2" style="color:#e67e22;"></i>
+            <h5 class="fw-bold">Paper Dragon</h5>
+            <!-- 👇 YAHAN PAPER DRAGON KA LINK DALO -->
+            <a href="dragon.html" class="btn btn-outline-warm mt-2 w-100">Try this fold</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container my-5">
+    <div class="bg-warning bg-opacity-10 p-5 rounded-4 text-center">
+      <h2 class="fw-bold display-6">Let's fold together</h2>
+      <p class="lead text-secondary col-lg-8 mx-auto">Questions about a design, want to host a workshop, or just want to
+        share what you folded? We'd love to hear from you.</p>
+      <div class="row g-4 mt-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded-4 shadow">
+            <i class="fas fa-envelope fa-3x" style="color:#e67e22;"></i>
+            <h4 class="mt-2">Email</h4>
+            <p>sjunni0080@gmail.com</p>
+            <a href="mailto:sjunni0080@gmail.com" class="btn btn-outline-warm">Send Email</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded-4 shadow">
+            <i class="fab fa-instagram fa-3x" style="color:#e67e22;"></i>
+            <h4 class="mt-2">Instagram</h4>
+            <p>Its-Juni-Pathan</p>
+            <a href="https://instagram.com" target="_blank" class="btn btn-outline-warm">Follow</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded-4 shadow">
+            <i class="fas fa-location-dot fa-3x" style="color:#e67e22;"></i>
+            <h4 class="mt-2">Studio</h4>
+            <p>Baldia Town / Karachi</p>
+            <a href="#" class="btn btn-outline-warm">Visit Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="container my-5">
+    <div class="text-center p-5 rounded-4" style="background: #fef2e6;">
+      <h3 class="fw-bold">Ready to make your first fold?</h3>
+      <p class="lead mb-3">Pick a category, grab a sheet of paper, and follow the steps. No experience needed — just
+        patience.</p>
+      <a href="#categories" class="btn btn-soft-primary btn-lg px-5"><i class="fas fa-hand-peace me-2"></i>Browse all
+        categories</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3>Origami<span class="text-warning">ForAll</span></h3>
+          <p>Learn the gentle art of paper folding — one crease at a time.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Explore</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>Newsletter</h5>
+          <p class="small">A new fold delivered to your inbox each week.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="your@email.com" id="newsletterEmail">
+            <button class="btn btn-warning" type="button" id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="newsletterMsg" class="small mt-2"></div>
+        </div>
+        <div class="col-lg-3">
+          <h5>Feedback</h5>
+          <button class="btn btn-outline-light btn-sm rounded-pill" data-bs-toggle="modal"
+            data-bs-target="#feedbackModal">
+            <i class="fas fa-comment-dots me-1"></i> Send feedback
+          </button>
+        </div>
+      </div>
+      <hr class="mt-4 opacity-25">
+      <div class="text-center small">© 2025 OrigamiForAll — Follow with palette and good paper.</div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">We'd love your feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="feedbackForm">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="feedbackName">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" id="feedbackMessage" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-soft-primary w-100">Submit feedback</button>
+            <div id="feedbackSuccess" class="mt-2 text-success small text-center"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    $(document).ready(function () {
+      AOS.init({ duration: 800, once: true, offset: 50 });
+
+      // Newsletter Subscription
+      $('#subscribeBtn').on('click', function () {
+        let email = $('#newsletterEmail').val();
+        if (email && email.includes('@')) {
+          $('#newsletterMsg').html('✨ Subscribed! ✨').css('color', '#f5bc70');
+          $('#newsletterEmail').val('');
+        } else {
+          $('#newsletterMsg').html('Valid email please.').css('color', '#f8b281');
+        }
+        setTimeout(() => $('#newsletterMsg').fadeOut(2000, function () { $(this).html('').show(); }), 2000);
+      });
+
+      // Feedback Form
+      $('#feedbackForm').on('submit', function (e) {
+        e.preventDefault();
+        let name = $('#feedbackName').val() || "Friend";
+        let msg = $('#feedbackMessage').val();
+        if (!msg) {
+          $('#feedbackSuccess').html('Please write a message.').css('color', '#dc3545');
+          return;
+        }
+        $('#feedbackSuccess').html(`Thanks ${name}! We'll get back to you.`).css('color', '#2b6e3c');
+        $('#feedbackForm')[0].reset();
+        setTimeout(() => { $('#feedbackSuccess').html(''); $('#feedbackModal').modal('hide'); }, 2000);
+      });
+    });
+  </script>
+</body>
+
+</html>

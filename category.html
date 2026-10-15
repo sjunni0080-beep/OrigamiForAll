@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>OrigamiForAll | All Categories – Fold your journey</title>
+  <!-- Bootstrap 5 CSS + Icons + Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #2c2a29;
+      line-height: 1.5;
+    }
+
+    h1, h2, h3, h4, .logo, .footer-logo, .category-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #fffaf3;
+      border-bottom: 1px solid #f0e2d4;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+      padding: 1rem 0;
+    }
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #3b2b1f;
+    }
+    .navbar-brand span {
+      font-weight: 300;
+      font-style: italic;
+      color: #b87c4f;
+    }
+    .nav-link {
+      font-weight: 500;
+      color: #4a3a2c !important;
+      margin: 0 0.2rem;
+      font-size: 1.05rem;
+      transition: all 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #b3682c !important;
+      transform: translateY(-1px);
+    }
+
+    /* Categories Header */
+    .categories-header {
+      background: linear-gradient(105deg, #fff7ef 0%, #fef3e8 100%);
+      padding: 2.5rem 0 1.5rem 0;
+      border-bottom: 1px solid #f3e3d5;
+      margin-bottom: 2rem;
+    }
+
+    /* Category Card - ANIMATED with proper anchor tags inside */
+    .category-card {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.2);
+      border: 1px solid #f0e2d4;
+      box-shadow: 0 6px 12px -8px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .category-card:hover {
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 28px 32px -16px rgba(0, 0, 0, 0.15);
+      border-color: #e2cfbe;
+    }
+
+    /* Image container */
+    .image-container {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background-color: #f5ede5;
+      position: relative;
+    }
+
+    .category-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .category-card:hover .category-img {
+      transform: scale(1.06);
+    }
+
+    /* Badge */
+    .design-badge {
+      background: #f3e5da;
+      border-radius: 60px;
+      padding: 0.25rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #a5622c;
+      display: inline-block;
+    }
+
+    /* Button inside card - link style */
+    .card-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #b87c4f;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .card-link-btn i {
+      transition: transform 0.2s ease;
+    }
+
+    .card-link-btn:hover {
+      color: #e67e22;
+      gap: 10px;
+    }
+
+    .card-link-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Footer */
+    .footer {
+      background: #2c241e;
+      color: #e7dbcf;
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+    .footer a {
+      color: #e7cfba;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #f6bd8c;
+    }
+    .newsletter-input-group {
+      max-width: 350px;
+      background: #40362e;
+      border-radius: 60px;
+      overflow: hidden;
+    }
+    .newsletter-input-group .form-control {
+      background: #3d332b;
+      border: none;
+      color: white;
+      padding: 0.7rem 1rem;
+    }
+    .btn-subscribe {
+      background: #e7b183;
+      border: none;
+      color: #2c241e;
+      font-weight: 600;
+      padding: 0 1.5rem;
+      border-radius: 60px;
+    }
+    .social-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: #4c3d30;
+      border-radius: 50%;
+      margin-right: 12px;
+      transition: all 0.2s;
+      color: #f7e3d2;
+    }
+    .social-circle:hover {
+      background: #b87c4f;
+      color: white;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .image-container {
+        height: 160px;
+      }
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+      .categories-header {
+        padding: 1.8rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">
+      <i class="fas fa-paper-plane me-2" style="color:#e67e22;"></i> Origami<span class="text-warning">ForAll</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="category.html">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section class="categories-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-lg-start" data-aos="fade-right">
+        <h1 class="display-5 fw-semibold">All categories</h1>
+        <p class="lead text-secondary mt-2" style="max-width: 680px; color:#5e4b38 !important;">
+          Pick a style or theme that calls to you — every category includes designs with full step-by-step folds.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Grid - EVERY CARD HAS ANCHOR TAG INSIDE (animated) -->
+<div class="container mb-5 pb-4">
+  <div class="row g-4">
+
+    <!-- Category 1: Easy for Kids -> links to esay-for-kids.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/48.jpg" alt="paper bird">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h3 class="h5 fw-semibold mb-0 category-title">paper bird</h3>
+            <span class="design-badge">beginner</span>
+          </div>
+          <p class="small text-secondary mb-2">Simple folds with quick wins — perfect for tiny hands.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>32 designs</span>
+            <!-- ANCHOR TAG inside card -->
+            <a href="paperbird.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 2: Intermediate -> links to intermediate.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="50">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/50.jpg" alt="Intermediate">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Intermediate-expirience</h3>
+          <p class="small text-secondary mb-2">Step up with a few extra creases and a little patience.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>27 designs</span>
+            <a href="Intermediate-expirience.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 3: Complex for Elders -> ComplexforElders.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/61.jpg" alt="Complex for Elders">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Complex for Elders</h3>
+          <p class="small text-secondary mb-2">Intricate models that reward slow, careful folding.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>21 designs</span>
+            <a href="Complex.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 4: Animals -> animals.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/62.jpg" alt="Animals">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">paper-boat</h3>
+          <p class="small text-secondary mb-2">Foxes, elephants, frogs and more — a paper zoo.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>38 designs</span>
+            <a href="paper-.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 5: Birds -> birds.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/63.jpg" alt="Birds">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Birds-paper</h3>
+          <p class="small text-secondary mb-2">Cranes, swans and sparrows that look ready to fly.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>35 designs</span>
+            <a href="Birds-paper.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 6: Flowers -> flowers.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="250">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/64.jpg" alt="Flowers">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">paper lilly</h3>
+          <p class="small text-secondary mb-2">Tulips, lotuses and roses that never wilt.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>40 designs</span>
+            <a href="paper.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 7: Faces -> faces.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/65.jpg" alt="Faces">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Faces</h3>
+          <p class="small text-secondary mb-2">Playful paper portraits and expressive masks.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>23 designs</span>
+            <a href="Faces.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 8: Boxes & Containers -> boxes.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/31.jpg" alt="Boxes">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">festiwal day</h3>
+          <p class="small text-secondary mb-2">Functional folds — gift boxes, trays and envelopes.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>28 designs</span>
+            <a href="festiwal.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 9: Holiday & Festive -> holiday.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/46.jpg" alt="Holiday">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Holiday & Festive</h3>
+          <p class="small text-secondary mb-2">Stars, lanterns and ornaments for every season.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>31 designs</span>
+            <a href="Holiday.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 10: Modular -> modular.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="450">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/37.jpg" alt="Modular">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Modular</h3>
+          <p class="small text-secondary mb-2">Many units, one stunning sculpture.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>25 designs</span>
+            <a href="Modular.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 11: Action Models -> action.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/45.jpg" alt="Action">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Action Models</h3>
+          <p class="small text-secondary mb-2">Jumping frogs, flapping birds and snappy fortunes.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>29 designs</span>
+            <a href="Action.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 12: Traditional Japanese -> japanese.html -->
+    <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+      <div class="category-card">
+        <div class="image-container">
+          <img class="category-img" src="images/13.jpg" alt="Japanese">
+        </div>
+        <div class="p-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 fw-semibold mb-2 category-title">Traditional Japanese</h3>
+          <p class="small text-secondary mb-2">Classic designs passed down through generations.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2">
+            <span class="small text-muted"><i class="far fa-file-alt me-1"></i>33 designs</span>
+            <a href="Japanese.html" class="card-link-btn">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Informative note -->
+  <div class="alert alert-light mt-5 text-center border rounded-4" style="background:#fef7f0;" data-aos="fade-up">
+    <i class="fas fa-folder-open me-2"></i>
+    <strong>📁 Every fold tells a story:</strong><br>
+    <small>Tap on "Explore" to view detailed step-by-step instructions for each category. From beginner to advanced, we have something for everyone.</small>
+  </div>
+</div>
+
+ <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3>Origami<span class="text-warning">ForAll</span></h3>
+          <p>Learn the gentle art of paper folding — one crease at a time.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Explore</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>Newsletter</h5>
+          <p class="small">A new fold delivered to your inbox each week.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="your@email.com" id="newsletterEmail">
+            <button class="btn btn-warning" type="button" id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="newsletterMsg" class="small mt-2"></div>
+        </div>
+        <div class="col-lg-3">
+          <h5>Feedback</h5>
+          <button class="btn btn-outline-light btn-sm rounded-pill" data-bs-toggle="modal"
+            data-bs-target="#feedbackModal">
+            <i class="fas fa-comment-dots me-1"></i> Send feedback
+          </button>
+        </div>
+      </div>
+      <hr class="mt-4 opacity-25">
+      <div class="text-center small">© 2025 OrigamiForAll — Follow with palette and good paper.</div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">We'd love your feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="feedbackForm">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="feedbackName">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" id="feedbackMessage" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-soft-primary w-100">Submit feedback</button>
+            <div id="feedbackSuccess" class="mt-2 text-success small text-center"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  $(document).ready(function () {
+    // Initialize AOS animations
+    AOS.init({
+      duration: 700,
+      once: true,
+      offset: 40,
+      easing: 'ease-out-quad'
+    });
+
+    // Newsletter subscription
+    $('#subscribeBtn').on('click', function () {
+      let email = $('#newsletterEmail').val().trim();
+      let msg = $('#subscribeMsg');
+      if (!email || !email.includes('@')) {
+        msg.removeClass('text-success').addClass('text-danger').html('✧ Valid email please ✧').fadeIn(200);
+        setTimeout(() => msg.fadeOut(600), 2500);
+        return;
+      }
+      msg.removeClass('text-danger').addClass('text-success').html(`🎉 Thanks! Fold arrives at ${email}.`).fadeIn(300);
+      $('#newsletterEmail').val('');
+      setTimeout(() => msg.fadeOut(800), 3500);
+    });
+  });
+</script>
+</body>
+
+</html>
